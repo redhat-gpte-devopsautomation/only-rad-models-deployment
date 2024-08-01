@@ -48,7 +48,7 @@ spec:
         targetRevision: dev
         path: bootstrap/ic-user-projects      
       - cluster: in-cluster
-        name: ic-shared-app
+        name: model-deployment
         repoURL: https://github.com/redhat-gpte-devopsautomation/only-rad-models-deployment.git
         targetRevision: dev
         path: bootstrap/llms-deployment
