@@ -10,6 +10,7 @@ resources:
 # wave 1
 #- pvc.yml
 - serviceaccount.yml
+- role-for-ic-shared-minio-access.yml
 - create-root-user-job.yml
 #- deployment.yml
 #- service.yml
