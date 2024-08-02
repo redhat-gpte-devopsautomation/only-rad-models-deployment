@@ -8,11 +8,6 @@ spec:
   - list:
       elements:
       - cluster: in-cluster
-        name: ic-shared-minio-app
-        repoURL: https://github.com/redhat-gpte-devopsautomation/only-rad-models-deployment.git
-        targetRevision: dev
-        path: bootstrap/ic-shared-minio
-      - cluster: in-cluster
         name: ic-shared-database-app
         repoURL: https://github.com/redhat-gpte-devopsautomation/only-rad-models-deployment.git
         targetRevision: dev

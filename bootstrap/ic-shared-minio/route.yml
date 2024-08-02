@@ -2,7 +2,7 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: minio-console
+  name: console
   labels:
     app: minio
   annotations:
@@ -22,7 +22,7 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: minio-s3
+  name: minio
   labels:
     app: minio
   annotations:
