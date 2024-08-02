@@ -9,4 +9,3 @@ metadata:
   annotations:
     openshift.io/display-name: "AI Workshop"
     argocd.argoproj.io/sync-wave: "0"
-    

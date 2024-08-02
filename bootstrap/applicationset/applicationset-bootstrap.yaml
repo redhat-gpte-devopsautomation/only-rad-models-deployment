@@ -14,7 +14,7 @@ spec:
         path: bootstrap/create-bucket    
       - cluster: in-cluster
         name: ic-user-projects
-        repoURL: https://github.com/redhat-gpte-devopsautomation/only-rad-model-deployment.git
+        repoURL: https://github.com/redhat-gpte-devopsautomation/only-rad-models-deployment.git
         targetRevision: dev
         path: bootstrap/ic-user-projects      
       - cluster: in-cluster
