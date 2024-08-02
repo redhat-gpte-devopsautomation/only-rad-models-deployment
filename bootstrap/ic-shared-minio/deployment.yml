@@ -24,7 +24,8 @@ spec:
         image: quay.io/minio/minio:RELEASE.2024-05-28T17-19-04
         envFrom:
         - secretRef:
-            name: minio-root-user
+            name: minio-keys
+            key: minio_root_password
         ports:
         - containerPort: 9000
           protocol: TCP
