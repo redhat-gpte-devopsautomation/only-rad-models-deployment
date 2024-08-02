@@ -25,8 +25,8 @@ spec:
           # Get user count
           user_count=$(oc get namespaces | grep showroom | wc -l)
 
-          echo -n 'Waiting for minio-root-user secret'
-          while [ -z "\$(oc get secret -n ic-shared-minio minio-root-user -oname 2>/dev/null)" ]; do
+          echo -n 'Waiting for minio-keys secret'
+          while [ -z "\$(oc get secret -n ic-shared-minio minio-keys -oname 2>/dev/null)" ]; do
             echo -n .
             sleep 5
           done; echo
@@ -38,8 +38,8 @@ spec:
           done; echo
 
           # Get needed variables
-          MINIO_ROOT_USER=$(oc get secret minio-root-user -n ic-shared-minio -o template --template '{{.data.MINIO_ROOT_USER|base64decode}}')
-          MINIO_ROOT_PASSWORD=$(oc get secret minio-root-user -n ic-shared-minio -o template --template '{{.data.MINIO_ROOT_PASSWORD|base64decode}}')
+          MINIO_ROOT_USER=$(oc get secret minio-keys -n ic-shared-minio -o template --template '{{.data.minio_root_user|base64decode}}')
+          MINIO_ROOT_PASSWORD=$(oc get secret minio-keys -n ic-shared-minio -o template --template '{{.data.minio_root_password|base64decode}}')
           MINIO_HOST=https://$(oc get route minio-s3 -n ic-shared-minio -o template --template '{{.spec.host}}')
           DASHBOARD_ROUTE=https://$(oc get route rhods-dashboard -n redhat-ods-applications -o jsonpath='{.spec.host}')
 
