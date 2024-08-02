@@ -32,7 +32,7 @@ spec:
       runtime: parasol-embedding
       storage:
         key: aws-connection-aiworkshop
-        path: nomic-embed-text-v1.5
+        path: parasol-embedding
     tolerations:
       - effect: NoSchedule
         key: nvidia.com/gpu
