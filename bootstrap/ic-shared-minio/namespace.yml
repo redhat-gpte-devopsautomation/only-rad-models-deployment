@@ -2,10 +2,10 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ic-shared-minio
+  name: bucket-creation
   labels:
-    app: ic-shared-minio
+    app: bucket-creation
     argocd.argoproj.io/managed-by: openshift-gitops
   annotations:
-    openshift.io/display-name: "MinIO Object Storage"
+    openshift.io/display-name: "Bucket Creation"
     argocd.argoproj.io/sync-wave: "0"
