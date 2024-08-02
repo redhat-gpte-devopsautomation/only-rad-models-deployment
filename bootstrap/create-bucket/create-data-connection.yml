@@ -22,8 +22,8 @@ spec:
         args:
         - -ec
         - |-
-          echo -n "Waiting for minio-root-user to exist"
-          while [ -z "$(oc get secret -n ic-shared-minio minio-root-user -oname 2>/dev/null)" ]; do
+          echo -n "Waiting for minio-keys to exist"
+          while [ -z "$(oc get secret -n ic-shared-minio minio-keys -oname 2>/dev/null)" ]; do
             echo -n '.'
             sleep 1
           done; echo
