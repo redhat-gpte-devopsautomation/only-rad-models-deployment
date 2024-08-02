@@ -11,7 +11,7 @@ spec:
   ports:
   - name: minio
     port: 9000
-    targetPort: 9000
+    targetPort: minio
   - name: console
     port: 9001
     targetPort: 9001
