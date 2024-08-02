@@ -8,7 +8,7 @@ spec:
   - list:
       elements:
       - cluster: in-cluster
-        name: ic-shared-minio
+        name: bucket-creation-minio
         repoURL: https://github.com/redhat-gpte-devopsautomation/only-rad-models-deployment.git
         targetRevision: dev
         path: bootstrap/ic-shared-minio     
