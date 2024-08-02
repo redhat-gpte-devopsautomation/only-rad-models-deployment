@@ -9,7 +9,7 @@ resources:
 - namespace.yml
 # wave 1
 #- pvc.yml
-#- serviceaccount.yml
+- serviceaccount.yml
 - create-root-user-job.yml
 #- deployment.yml
 #- service.yml
