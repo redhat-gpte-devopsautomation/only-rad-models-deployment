@@ -4,9 +4,6 @@ kind: Kustomization
 
 namespace: bucket-creation
 
-commonLabels:
-  component: minio
-
 resources:
 # wave 0
 - namespace.yml
