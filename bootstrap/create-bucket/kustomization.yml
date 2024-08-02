@@ -2,15 +2,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: bucket-creation
+#namespace: bucket-creation
 
 resources:
 # wave 0
-- namespace.yml
+#- namespace.yml
 # wave 1
 #- pvc.yml
-- serviceaccount.yml
-- role-for-ic-shared-minio-access.yml
+#- serviceaccount.yml
+#- role-for-ic-shared-minio-access.yml
 - create-root-user-job.yml
 #- deployment.yml
 #- service.yml

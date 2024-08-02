@@ -3,6 +3,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: create-data-connection
+  namespace: ic-shared-minio
   # generateName: create-dc-
   annotations:
     argocd.argoproj.io/sync-wave: "2"
