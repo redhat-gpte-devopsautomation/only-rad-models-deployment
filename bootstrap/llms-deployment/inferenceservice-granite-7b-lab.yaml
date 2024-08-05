@@ -2,6 +2,7 @@ apiVersion: serving.kserve.io/v1beta1
 kind: InferenceService
 metadata:
   annotations:
+    argocd.argoproj.io/managed-by: openshift-gitops  
     openshift.io/display-name: granite-7b-lab
     serving.knative.openshift.io/enablePassthrough: 'true'
     sidecar.istio.io/inject: 'true'

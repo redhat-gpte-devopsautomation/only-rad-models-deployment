@@ -2,6 +2,7 @@ apiVersion: serving.kserve.io/v1alpha1
 kind: ServingRuntime
 metadata:
   annotations:
+    argocd.argoproj.io/managed-by: openshift-gitops  
     opendatahub.io/accelerator-name: migrated-gpu
     opendatahub.io/apiProtocol: REST
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'

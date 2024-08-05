@@ -3,6 +3,8 @@ apiVersion: v1
 metadata:
   name: storage-config
   namespace: aiworkshop
+  annotations:
+    argocd.argoproj.io/managed-by: openshift-gitops  
   labels:
     opendatahub.io/managed: 'true'
 data:
