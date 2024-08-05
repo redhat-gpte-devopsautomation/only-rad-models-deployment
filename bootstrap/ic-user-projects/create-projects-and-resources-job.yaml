@@ -195,19 +195,21 @@ spec:
             name: pipelines-definition
             namespace: $USER_PROJECT
           spec:
-            apiServer:
-              applyTektonCustomResource: true
-              archiveLogs: false
-              autoUpdatePipelineDefaultVersion: true
-              collectMetrics: true
-              dbConfigConMaxLifetimeSec: 120
-              deploy: true
-              enableOauth: true
-              enableSamplePipeline: false
-              injectDefaultScript: true
-              stripEOF: true
-              terminateStatus: Cancelled
-              trackArtifacts: true
+              apiServer:
+                caBundleFileMountPath: ''
+                stripEOF: true
+                dbConfigConMaxLifetimeSec: 120
+                applyTektonCustomResource: true
+                caBundleFileName: ''
+                deploy: true
+                enableSamplePipeline: false
+                autoUpdatePipelineDefaultVersion: true
+                archiveLogs: false
+                terminateStatus: Cancelled
+                enableOauth: true
+                trackArtifacts: true
+                collectMetrics: true
+                injectDefaultScript: true
             database:
               mariaDB:
                 deploy: true
