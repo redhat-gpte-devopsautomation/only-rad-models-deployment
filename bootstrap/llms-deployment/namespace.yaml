@@ -4,6 +4,7 @@ kind: Namespace
 metadata:
   name: aiworkshop
   labels:
+    app: aiworkshop  
     argocd.argoproj.io/managed-by: openshift-gitops
     opendatahub.io/dashboard: "true"    
   annotations:
