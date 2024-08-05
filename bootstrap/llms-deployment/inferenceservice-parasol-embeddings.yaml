@@ -14,26 +14,27 @@ metadata:
   labels:
     opendatahub.io/dashboard: 'true'
 spec:
+
   predictor:
     maxReplicas: 1
     minReplicas: 1
     model:
       modelFormat:
-        name: any
+        name: pytorch
       name: ''
       resources:
         limits:
-          cpu: '1'
-          memory: 1Gi
+          cpu: '4'
+          memory: 8Gi
           nvidia.com/gpu: '1'
         requests:
-          cpu: '1'
-          memory: 1Gi
+          cpu: '4'
+          memory: 8Gi
           nvidia.com/gpu: '1'
       runtime: parasol-embedding
       storage:
-        key: aws-connection-aiworkshop
-        path: parasol-embedding
+        key: aws-connection-aiworkshop-dc
+        path: parasol-embedding/nomic-ai/nomic-embed-text-v1.5/
     tolerations:
       - effect: NoSchedule
         key: nvidia.com/gpu
