@@ -23,9 +23,20 @@ spec:
         - -ec
         - |-
           # Get dashboard json
-          curl -LfO https://github.com/NVIDIA/dcgm-exporter/raw/main/grafana/dcgm-exporter-dashboard.json
-          oc create configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed --from-file=dcgm-exporter-dashboard.json
-          oc label configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed "console.openshift.io/dashboard=true"
-          oc label configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed "console.openshift.io/odc-dashboard=true"
+          # Check if the ConfigMap already exists
+          if oc get configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed; then
+            echo "ConfigMap nvidia-dcgm-exporter-dashboard already exists. Skipping creation."
+          else
+            # Get dashboard JSON
+            curl -LfO https://github.com/NVIDIA/dcgm-exporter/raw/main/grafana/dcgm-exporter-dashboard.json
+            
+            # Create ConfigMap
+            oc create configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed --from-file=dcgm-exporter-dashboard.json
+            
+            # Label the ConfigMap
+            oc label configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed "console.openshift.io/dashboard=true"
+            oc label configmap nvidia-dcgm-exporter-dashboard -n openshift-config-managed "console.openshift.io/odc-dashboard=true"
+            echo "ConfigMap nvidia-dcgm-exporter-dashboard created and labeled."
+          fi
           oc -n openshift-config-managed get cm nvidia-dcgm-exporter-dashboard --show-labels
       restartPolicy: Never

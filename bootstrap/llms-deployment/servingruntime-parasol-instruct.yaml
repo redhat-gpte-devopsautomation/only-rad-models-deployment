@@ -9,7 +9,6 @@ metadata:
     opendatahub.io/template-display-name: RAD - vLLM ServingRuntime for KServe
     opendatahub.io/template-name: vllm-runtime-copy
     openshift.io/display-name: parasol-instruct
-    serving.kserve.io/deploymentMode: RawDeployment
     argocd.argoproj.io/sync-wave: "1" 
   name: parasol-instruct
   namespace: aiworkshop

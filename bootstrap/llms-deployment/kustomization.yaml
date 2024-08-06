@@ -17,6 +17,8 @@ resources:
 - servingruntime-parasol-chat.yaml
 - servingruntime-parasol-instruct.yaml
 - servingruntime-parasol-embeddings.yaml
+- servingruntime-rad-vllm.yaml
+- servingruntime-rad-granite-vllm.yaml
 #- job-upload-model-to-s3.yaml
 - inferenceservice-granite-7b-lab.yaml
 - inferenceservice-merlinite-7b-lab.yaml

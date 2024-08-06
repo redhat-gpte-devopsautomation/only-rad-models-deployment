@@ -9,7 +9,7 @@ metadata:
     opendatahub.io/template-display-name: RAD - vLLM ServingRuntime for KServe
     opendatahub.io/template-name: vllm-runtime-copy
     openshift.io/display-name: parasol-chat
-    argocd.argoproj.io/sync-wave: "1" 
+    argocd.argoproj.io/sync-wave: "1"
   name: parasol-chat
   namespace: aiworkshop
   labels:

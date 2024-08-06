@@ -5,7 +5,6 @@ metadata:
     argocd.argoproj.io/managed-by: openshift-gitops  
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
     openshift.io/display-name: RAD - vLLM ServingRuntime for KServe
-    serving.kserve.io/deploymentMode: RawDeployment
     argocd.argoproj.io/sync-wave: "1" 
   labels:
     opendatahub.io/dashboard: "true"
