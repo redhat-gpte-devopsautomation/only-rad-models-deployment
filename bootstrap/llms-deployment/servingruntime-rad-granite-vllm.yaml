@@ -9,6 +9,7 @@ metadata:
   labels:
     opendatahub.io/dashboard: "true"
   name: vllm-runtime-copy-copy
+  namespace: aiworkshop  
 spec:
   annotations:
     prometheus.io/path: /metrics
