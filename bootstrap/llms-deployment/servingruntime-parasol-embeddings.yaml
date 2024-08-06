@@ -5,8 +5,8 @@ metadata:
     argocd.argoproj.io/managed-by: openshift-gitops  
     opendatahub.io/accelerator-name: migrated-gpu
     opendatahub.io/apiProtocol: REST
-    opendatahub.io/template-display-name: Ollama
-    opendatahub.io/template-name: ollama
+    opendatahub.io/template-display-name: RAD - vLLM ServingRuntime for KServe
+    opendatahub.io/template-name: RAD - vLLM ServingRuntime for KServelama
     openshift.io/display-name: parasol-embedding
     argocd.argoproj.io/sync-wave: "1" 
   name: parasol-embedding
