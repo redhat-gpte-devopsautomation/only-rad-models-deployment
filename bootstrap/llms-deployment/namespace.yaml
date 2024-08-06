@@ -8,6 +8,5 @@ metadata:
     argocd.argoproj.io/managed-by: openshift-gitops
     opendatahub.io/dashboard: "true"    
   annotations:
-    openshift.io/display-name: "AI Workshop"
-    argocd.argoproj.io/hook: PreSync    
+    openshift.io/display-name: "AI Workshop"  
     argocd.argoproj.io/sync-wave: "-1"
