@@ -33,7 +33,7 @@ spec:
           nvidia.com/gpu: '1'
       runtime: parasol-embedding
       storage:
-        key: aws-connection-aiworkshop-dc
+        key: aws-connection-aiworkshop
         path: parasol-embedding/nomic-ai/nomic-embed-text-v1.5/
     tolerations:
       - effect: NoSchedule
