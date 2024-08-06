@@ -8,6 +8,7 @@ metadata:
     opendatahub.io/template-display-name: Ollama
     opendatahub.io/template-name: ollama
     openshift.io/display-name: parasol-embedding
+    argocd.argoproj.io/sync-wave: "1" 
   name: parasol-embedding
   namespace: aiworkshop
   labels:

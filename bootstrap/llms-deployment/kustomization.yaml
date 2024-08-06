@@ -8,16 +8,16 @@ commonLabels:
 resources:
 # wave 0
 - namespace.yaml
+# wave 1
 - secret-aws-connection-aiworkshop.yaml
 - storage-config-aiworkshop.yaml
-# wave 1
+# wave 2
 - servingruntime-granite-7b-lab.yaml
 - servingruntime-merlinite-7b-lab.yaml
 - servingruntime-parasol-chat.yaml
 - servingruntime-parasol-instruct.yaml
 - servingruntime-parasol-embeddings.yaml
 #- job-upload-model-to-s3.yaml
-# wave 2
 - inferenceservice-granite-7b-lab.yaml
 - inferenceservice-merlinite-7b-lab.yaml
 - inferenceservice-parasol-chat.yaml

@@ -9,6 +9,7 @@ metadata:
     opendatahub.io/template-display-name: RAD (Granite) - vLLM ServingRuntime for KServe
     opendatahub.io/template-name: vllm-runtime-copy-copy
     openshift.io/display-name: granite-7b-lab
+    argocd.argoproj.io/sync-wave: "1"    
   name: granite-7b-lab
   namespace: aiworkshop
   labels:

@@ -9,6 +9,7 @@ metadata:
     opendatahub.io/template-display-name: RAD - vLLM ServingRuntime for KServe
     opendatahub.io/template-name: vllm-runtime-copy
     openshift.io/display-name: merlinite-7b-lab
+    argocd.argoproj.io/sync-wave: "1" 
   name: merlinite-7b-lab
   namespace: aiworkshop
   labels:

@@ -4,7 +4,8 @@ metadata:
   name: storage-config
   namespace: aiworkshop
   annotations:
-    argocd.argoproj.io/managed-by: openshift-gitops  
+    argocd.argoproj.io/managed-by: openshift-gitops
+    argocd.argoproj.io/sync-wave: "0" 
   labels:
     opendatahub.io/managed: 'true'
 data:
