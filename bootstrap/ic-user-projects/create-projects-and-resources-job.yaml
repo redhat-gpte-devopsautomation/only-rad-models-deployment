@@ -184,6 +184,8 @@ spec:
                 serviceAccount: demo-setup
                 serviceAccountName: demo-setup
           EOF
+          
+          echo "Setup pipeline server"
 
           # Set up the pipeline server
           cat << EOF | oc apply -f-
@@ -235,6 +237,8 @@ spec:
               deploy: true
           EOF
 
+          echo "Create Elyra secret"
+
           # Create the Elyra secret
           cat << EOF | oc apply -f-
           apiVersion: batch/v1
@@ -285,6 +289,8 @@ spec:
                 serviceAccountName: demo-setup
           EOF
 
+          echo "Create the workbench PVC"
+
           # Create the workbench PVC
           cat << EOF | oc apply -f-
           kind: PersistentVolumeClaim
@@ -310,6 +316,8 @@ spec:
             storageClassName: ocs-storagecluster-ceph-rbd
             volumeMode: Filesystem
           EOF
+
+          echo "Create the workbench"
 
           # Create the workbench
           cat << EOF | oc apply -f-
@@ -482,6 +490,8 @@ spec:
                       secretName: $WORKBENCH_NAME-tls
             readyReplicas: 1
           EOF
+
+          echo "Clone the repo"
 
           # Git clone job
           cat << EOF | oc apply -f-
