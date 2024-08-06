@@ -197,32 +197,38 @@ spec:
             name: pipelines-definition
             namespace: $USER_PROJECT
           spec:
-              apiServer:
-                caBundleFileMountPath: ''
-                stripEOF: true
-                dbConfigConMaxLifetimeSec: 120
-                applyTektonCustomResource: true
-                caBundleFileName: ''
-                deploy: true
-                enableSamplePipeline: false
-                autoUpdatePipelineDefaultVersion: true
-                archiveLogs: false
-                terminateStatus: Cancelled
-                enableOauth: true
-                trackArtifacts: true
-                collectMetrics: true
-                injectDefaultScript: true
+            apiServer:
+              caBundleFileMountPath: ''
+              stripEOF: true
+              dbConfigConMaxLifetimeSec: 120
+              applyTektonCustomResource: true
+              caBundleFileName: ''
+              deploy: true
+              enableSamplePipeline: false
+              autoUpdatePipelineDefaultVersion: true
+              archiveLogs: false
+              terminateStatus: Cancelled
+              enableOauth: true
+              trackArtifacts: true
+              collectMetrics: true
+              injectDefaultScript: true
             database:
+              disableHealthCheck: false
               mariaDB:
                 deploy: true
                 pipelineDBName: mlpipeline
                 pvcSize: 10Gi
                 username: mlpipeline
+            dspVersion: v2    
             objectStorage:
+              disableHealthCheck: false
+              enableExternalRoute: false
               externalStorage:
+                basePath: ''
                 bucket: $USER_NAME
                 host: minio.ic-shared-minio.svc.cluster.local:9000
                 port: ''
+                region: us-east-1
                 s3CredentialsSecret:
                   accessKey: AWS_ACCESS_KEY_ID
                   secretKey: AWS_SECRET_ACCESS_KEY
