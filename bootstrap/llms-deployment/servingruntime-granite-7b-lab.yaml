@@ -32,9 +32,7 @@ spec:
         - vllm.entrypoints.openai.api_server
       env:
         - name: HF_HOME
-          value: /tmp/hf_home
-        - name: K_SERVICE
-          value: granite-7b-lab     
+          value: /tmp/hf_home 
       image: 'quay.io/modh/vllm:rhoai-2.12'
       name: kserve-container
       ports:
