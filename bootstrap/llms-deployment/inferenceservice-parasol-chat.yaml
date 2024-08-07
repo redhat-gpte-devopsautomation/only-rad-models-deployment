@@ -19,7 +19,7 @@ spec:
     model:
       modelFormat:
         name: vLLM
-      name: ''
+      name: 'parasol-chat'
       resources:
         limits:
           cpu: '4'

@@ -19,7 +19,7 @@ spec:
     model:
       modelFormat:
         name: vLLM
-      name: ''
+      name: 'merlinite-7b-lab'
       resources:
         limits:
           cpu: '4'

@@ -22,7 +22,7 @@ spec:
     model:
       modelFormat:
         name: pytorch
-      name: ''
+      name: 'parasol-embedding'
       resources:
         limits:
           cpu: '4'

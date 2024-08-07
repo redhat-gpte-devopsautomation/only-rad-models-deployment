@@ -19,7 +19,7 @@ spec:
     model:
       modelFormat:
         name: vLLM
-      name: ''
+      name: 'parasol-instruct'
       resources:
         limits:
           cpu: '4'
