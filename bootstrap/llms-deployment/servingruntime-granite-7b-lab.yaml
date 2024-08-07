@@ -33,6 +33,14 @@ spec:
       env:
         - name: HF_HOME
           value: /tmp/hf_home
+        - name: PORT
+          value: '8080'
+        - name: K_REVISION
+          value: granite-7b-lab-00001
+        - name: K_CONFIGURATION
+          value: granite-7b-lab
+        - name: K_SERVICE
+          value: granite-7b-lab     
       image: 'quay.io/modh/vllm:rhoai-2.12'
       name: kserve-container
       ports:
