@@ -6,7 +6,9 @@ metadata:
   labels:
     app: aiworkshop  
     argocd.argoproj.io/managed-by: openshift-gitops
-    opendatahub.io/dashboard: "true"    
+    opendatahub.io/dashboard: "true"
+    modelmesh-enabled: "false"        
   annotations:
     openshift.io/display-name: "AI Workshop"  
     argocd.argoproj.io/sync-wave: "-1"
+    openshift.io/requester: RAD
