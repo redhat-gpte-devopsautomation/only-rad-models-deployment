@@ -14,14 +14,8 @@ metadata:
     template.openshift.io/documentation-url: 'https://github.com/opendatahub-io/vllm'
     openshift.io/provider-display-name: 'Red Hat, Inc.'
   name: rad-vllm-runtime-template
-  uid: B46D3021-794E-4AD8-8BC8-BEB90CCC0714
+#  uid: B46D3021-794E-4AD8-8BC8-BEB90CCC0714
   namespace: redhat-ods-applications
-  ownerReferences:
-    - apiVersion: datasciencecluster.opendatahub.io/v1
-      kind: DataScienceCluster
-      name: default-dsc
-      controller: true
-      blockOwnerDeletion: true
   labels:
     app: odh-dashboard
     app.kubernetes.io/part-of: model-mesh
