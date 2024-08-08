@@ -11,7 +11,7 @@ resources:
 # wave 1
 - secret-aws-connection-aiworkshop.yaml
 - storage-config-aiworkshop.yaml
-# wave 2
+- servingruntime-rad-vllm-template.yaml
 - servingruntime-granite-7b-lab.yaml
 - servingruntime-merlinite-7b-lab.yaml
 - servingruntime-parasol-chat.yaml
