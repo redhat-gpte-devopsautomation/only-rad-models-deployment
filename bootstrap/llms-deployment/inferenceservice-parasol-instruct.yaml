@@ -8,6 +8,7 @@ metadata:
     sidecar.istio.io/inject: 'true'
     sidecar.istio.io/rewriteAppHTTPProbers: 'true'
     argocd.argoproj.io/sync-wave: "1"
+    serving.kserve.io/deploymentMode: RawDeployment
   name: parasol-instruct
   namespace: aiworkshop
   labels:
