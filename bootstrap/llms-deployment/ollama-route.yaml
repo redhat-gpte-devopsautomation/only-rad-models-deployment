@@ -1,0 +1,12 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: ollama
+  labels: {}
+spec:
+  to:
+    kind: Service
+    name: ollama
+  tls: null
+  port:
+    targetPort: http

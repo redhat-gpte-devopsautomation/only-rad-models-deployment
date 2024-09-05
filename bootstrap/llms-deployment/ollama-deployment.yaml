@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ollama
+spec:
+  selector:
+    matchLabels:
+      name: ollama
+  template:
+    metadata:
+      labels:
+        name: ollama
+        app: ollama-serve
+    spec:
+      initContainers:
+      - name: ollama-pull
+        image: ollama/ollama:latest
+        command: ['sh', '-c', 'ollama serve & sleep 5; until ollama pull llama3.1; do echo waiting for ollama to come up; sleep 2; done']
+        volumeMounts:
+        - mountPath: /.ollama
+          name: ollama-storage
+
+      containers:
+      - name: ollama
+        image: ollama/ollama:latest
+        ports:
+        - name: http
+          containerPort: 11434
+          protocol: TCP
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /.ollama
+          name: ollama-storage
+        resources:
+          requests:
+            memory: 8G
+            cpu: '4'
+            nvidia.com/gpu: '1'
+          limits:
+            memory: 8G
+            cpu: '4'
+            nvidia.com/gpu: '1'
+      tolerations:
+        - key: nvidia.com/gpu
+          operator: Exists
+          effect: NoSchedule
+      volumes:
+      - name: ollama-storage
+        persistentVolumeClaim:
+          claimName: ollama-storage
+      restartPolicy: Always
