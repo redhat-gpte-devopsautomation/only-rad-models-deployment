@@ -25,7 +25,7 @@ spec:
         - '--served-model-name={{.Name}}'
         - '--distributed-executor-backend=mp'
         - '--max-model-len'
-        - '4096'
+        - '6144'
       command:
         - python
         - '-m'
