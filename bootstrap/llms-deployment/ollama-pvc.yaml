@@ -1,6 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  namespace: aiworkshop
   name: ollama-storage
 spec:
   storageClassName: gp3-csi
