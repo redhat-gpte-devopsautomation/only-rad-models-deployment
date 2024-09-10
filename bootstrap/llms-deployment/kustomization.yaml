@@ -26,6 +26,7 @@ resources:
 - inferenceservice-parasol-instruct.yaml
 - inferenceservice-parasol-embeddings.yaml
 - ollama-pvc.yaml
+# wave 2
 - ollama-deployment.yaml
 - ollama-service.yaml
 - ollama-route.yaml
