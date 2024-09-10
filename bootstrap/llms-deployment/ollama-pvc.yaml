@@ -2,6 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: ollama-storage
+  namespace: aiworkshop  
 spec:
   storageClassName: gp3-csi
   accessModes:
