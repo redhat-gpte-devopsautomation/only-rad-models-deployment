@@ -1,9 +1,9 @@
 kind: Route
 apiVersion: route.openshift.io/v1
+metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
   namespace: aiworkshop
-metadata:
   name: ollama
   labels: {}
 spec:
