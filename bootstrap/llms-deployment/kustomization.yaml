@@ -25,3 +25,8 @@ resources:
 - inferenceservice-parasol-chat.yaml
 - inferenceservice-parasol-instruct.yaml
 - inferenceservice-parasol-embeddings.yaml
+- ollama-pvc.yaml
+- ollama-deployment.yaml
+- ollama-service.yaml
+- ollama-route.yaml
+
