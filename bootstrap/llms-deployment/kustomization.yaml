@@ -29,5 +29,3 @@ resources:
 # wave 2
 - ollama-deployment.yaml
 - ollama-service.yaml
-- ollama-route.yaml
-
