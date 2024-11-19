@@ -53,7 +53,7 @@ objects:
           env:
             - name: HF_HOME
               value: /tmp/hf_home
-          image: quay.io/modh/vllm:rhoai-2.14
+          image: quay.io/modh/vllm:rhoai-2.16-cuda
           name: kserve-container
           ports:
             - containerPort: 8080
