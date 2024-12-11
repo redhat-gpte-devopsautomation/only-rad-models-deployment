@@ -8,9 +8,9 @@ metadata:
     opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
     opendatahub.io/template-display-name: RAD - vLLM ServingRuntime for KServe
     opendatahub.io/template-name: vllm-runtime-copy
-    openshift.io/display-name: granite-3.0-8b-instruct
+    openshift.io/display-name: granite-30-8b-instruct
     argocd.argoproj.io/sync-wave: "1" 
-  name: granite-3.0-8b-instruct
+  name: granite-30-8b-instruct
   namespace: aiworkshop
   labels:
     opendatahub.io/dashboard: 'true'

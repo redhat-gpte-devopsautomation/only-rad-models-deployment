@@ -3,13 +3,13 @@ kind: InferenceService
 metadata:
   annotations:
     argocd.argoproj.io/managed-by: openshift-gitops  
-    openshift.io/display-name: granite-3.0-8b-instruct
+    openshift.io/display-name: granite-30-8b-instruct
     serving.knative.openshift.io/enablePassthrough: 'true'
     sidecar.istio.io/inject: 'true'
     sidecar.istio.io/rewriteAppHTTPProbers: 'true'
     argocd.argoproj.io/sync-wave: "1"
     serving.kserve.io/deploymentMode: RawDeployment
-  name: granite-3.0-8b-instruct
+  name: granite-30-8b-instruct
   namespace: aiworkshop
   labels:
     opendatahub.io/dashboard: 'true'
@@ -30,10 +30,10 @@ spec:
           cpu: '4'
           memory: 8Gi
           nvidia.com/gpu: '1'
-      runtime: granite-3.0-8b-instruct
+      runtime: granite-30-8b-instruct
       storage:
         key: aws-connection-aiworkshop
-        path: granite-3.0-8b-instruct
+        path: granite-30-8b-instruct
     tolerations:
       - effect: NoSchedule
         key: nvidia.com/gpu
