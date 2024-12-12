@@ -33,7 +33,7 @@ spec:
       runtime: granite-30-8b-instruct
       storage:
         key: aws-connection-aiworkshop
-        path: granite-3.0-8b-instruct
+        path: granite-30-8b-instruct
     tolerations:
       - effect: NoSchedule
         key: nvidia.com/gpu
