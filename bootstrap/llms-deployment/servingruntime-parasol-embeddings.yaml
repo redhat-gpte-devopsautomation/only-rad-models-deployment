@@ -18,9 +18,9 @@ spec:
     modelLoadingTimeoutMillis: 90000
   containers:
     - args:
-        - '--model_path=/mnt/models'
-        - '--trust_remote_code=True'
-      image: 'quay.io/rh-aiservices-bu/sbert-runtime:1.1.0'
+        - '--model-path=/mnt/models'
+        - '--trust-remote-code=True'
+      image: 'quay.io/rh-aiservices-bu/sbert-runtime:1.2.0'
       name: kserve-container
       ports:
         - containerPort: 8080
