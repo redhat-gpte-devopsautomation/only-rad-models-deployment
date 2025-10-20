@@ -14,7 +14,7 @@ resources:
 - servingruntime-rad-vllm-template.yaml
 #- servingruntime-granite-7b-lab.yaml
 - servingruntime-granite-30-8b-instruct.yaml
-- servingruntime-granite-4-h-tiny.yaml
+#- servingruntime-granite-4-h-tiny.yaml
 - servingruntime-parasol-chat.yaml
 - servingruntime-parasol-instruct.yaml
 - servingruntime-parasol-embeddings.yaml
@@ -23,7 +23,7 @@ resources:
 #- job-upload-model-to-s3.yaml
 #- inferenceservice-granite-7b-lab.yaml
 - inferenceservice-granite-30-8b-instruct.yaml
-- inferenceservice-granite-4-h-tiny.yaml
+#- inferenceservice-granite-4-h-tiny.yaml
 - inferenceservice-parasol-chat.yaml
 - inferenceservice-parasol-instruct.yaml
 - inferenceservice-parasol-embeddings.yaml
