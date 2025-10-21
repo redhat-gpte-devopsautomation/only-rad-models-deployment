@@ -37,5 +37,4 @@ spec:
     tolerations:
       - effect: NoSchedule
         key: nvidia.com/gpu
-        operator: equal
-        value: 'NVIDIA-GPU-SMALL'
+        operator: Exists
